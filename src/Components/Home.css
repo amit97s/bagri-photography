@@ -1,0 +1,105 @@
+.parents {
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+.Home {
+  max-width: 1280px;
+  height: 600px;
+  margin: 65px auto;
+  /* background-image: url("https://images-pw.pixieset.com/sample_photos/sample-170_XL.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; */
+  /* border-radius: 15px; */
+  background-color: red;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+.child2 {
+  width: 1200px;
+  height: 500px;
+  display: flex;
+  margin: auto;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.child2-left {
+  width: 45%;
+  height: 65%;
+}
+.child2-left h2 {
+  margin-bottom: 45px;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  text-decoration: underline;
+  font-style: normal;
+}
+.child2-left p {
+  font-family: "Saira Semi Condensed", sans-serif;
+}
+.carousel {
+  position: relative;
+  height: 100%;
+}
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+}
+.carousel-inner img {
+  height: 100%;
+}
+.child2-right {
+  width: 45%;
+  height: 94%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://images-pw.pixieset.com/sample_photos/sample-170_XL.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+}
+.child2-right:hover {
+  background-image: url("https://images-pw.pixieset.com/sample_photos/sample-168_XL.jpg");
+  transition: 3s ease-out;
+}
+.grid {
+  width: 1200px;
+  height: 330px;
+  margin: 100px auto 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.grid1 {
+  width: 33%;
+  height: 99%;
+}
+.grid1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.quote {
+  width: 700px;
+  height: 150px;
+  margin: auto;
+}
+.quote h2 {
+  margin-top: 13px;
+  font-family: Whisper;
+  letter-spacing: 2px;
+}
+.quote p {
+  font-family: cursive;
+  margin-top: -2px;
+  color: rgb(239, 15, 15);
+  font-weight: 600;
+}
