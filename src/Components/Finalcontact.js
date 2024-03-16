@@ -5,8 +5,11 @@ const Finalcontact = () => {
   return (
     <div className="Finalcontact">
       <div className="Finalcontact-bgimg">
-        <div className="cont-img">
-          <img src={finimg} />
+        <div className=" flex justify-center ">
+          <img
+            src={finimg}
+            className="h-full mx-10 sm:mx-0 sm:h-72 md:h-[30rem] rounded-lg hover:scale-110 duration-150"
+          />
         </div>
         <div className="para">
           <p>

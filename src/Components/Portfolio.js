@@ -1,5 +1,5 @@
 import React from "react";
-import portcss from "./Portfolio.css";
+import "./Portfolio.css";
 import images1 from "../assets/1.jpg";
 import images2 from "../assets/2.jpg";
 import images3 from "../assets/3.jpg";

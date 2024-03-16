@@ -1,37 +1,16 @@
 import React from "react";
-import Aboutuscss from "./Aboutus.css";
+import "./Aboutus.css";
 import wedding from "../assets/iaw.jpg";
 
 const Aboutus = () => {
   return (
-    <div className="Aboutus">
-      <div className="submain">
-        <div className="submain-left">
-          <img
-            src={wedding}
-            alt=""
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              borderRadius: "15px",
-            }}
-          />
-        </div>
-        <div className="submain-right">
-          <h1>
-            <a
-              href="#"
-              style={{
-                margin: "10px ",
-                color: "green",
-                fontWeight: "600",
-                fontSize: "30px",
-              }}
-            >
-              About me
-            </a>
-          </h1>
+    <>
+      <main className="flex justify-center flex-col md:flex-row items-center  px-10 gap-5 md:gap-32">
+        <section>
+          <img src={wedding} alt="weeding" className="h-[34rem]" />
+        </section>
+        <section className="w-full sm:w-[30rem] shadow-lg py-4 px-4 rounded-md">
+          <h1 className="underline text-green-600 py-1">About Me</h1>
           <p>
             Introducing myself to strangers through my lens is a dance of
             connection <br />
@@ -52,23 +31,16 @@ const Aboutus = () => {
             lingers, connecting us through the
             <br /> universal language of emotion and narrative.
           </p>
-          <span
-            style={{
-              float: "right",
-              margin: "10px ",
-              color: "green",
-              fontWeight: "600",
-            }}
-          >
-            Bajrang Bairagi.......
-          </span>
-        </div>
-      </div>
+
+          <p className="text-green-600 text-end">Bajrang Bairagi.......</p>
+        </section>
+      </main>
+
       <div className="slider"></div>
       <div className="contact-me ">
         <span style={{ fontFamily: "monospace" }}>Contact me</span>
       </div>
-    </div>
+    </>
   );
 };
 

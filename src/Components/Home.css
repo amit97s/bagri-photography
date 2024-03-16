@@ -4,7 +4,7 @@
   margin: auto;
 }
 .Home {
-  max-width: 1280px;
+  /* max-width: 1280px; */
   height: 600px;
   margin: 65px auto;
   /* background-image: url("https://images-pw.pixieset.com/sample_photos/sample-170_XL.jpg");
@@ -18,10 +18,11 @@
   z-index: 0;
 }
 .child2 {
-  width: 1200px;
+  /* width: 1200px; */
   height: 500px;
   display: flex;
   margin: auto;
+  align-items: center;
   justify-content: space-evenly;
   align-items: center;
 }
@@ -30,17 +31,29 @@
   width: 45%;
   height: 65%;
 }
-.child2-left h2 {
-  margin-bottom: 45px;
+.heading {
+  margin-bottom: 20px;
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
   font-weight: 600;
   text-decoration: underline;
   font-style: normal;
 }
-.child2-left p {
+
+@media screen and (max-width: 768px) {
+  .heading {
+    text-align: center;
+  }
+}
+.paragraph {
   font-family: "Saira Semi Condensed", sans-serif;
 }
+@media screen and (max-width: 768px) {
+  .child2 {
+    flex-direction: column;
+  }
+}
+
 .carousel {
   position: relative;
   height: 100%;
@@ -55,23 +68,31 @@
   height: 100%;
 }
 .child2-right {
-  width: 45%;
+  /* margin-top: 8rem;
+  width: 70%;
   height: 94%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("https://images-pw.pixieset.com/sample_photos/sample-170_XL.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  border-radius: 15px;
+  border-radius: 15px; */
+  background-image: url("https://images-pw.pixieset.com/sample_photos/sample-170_XL.jpg");
 }
 .child2-right:hover {
   background-image: url("https://images-pw.pixieset.com/sample_photos/sample-168_XL.jpg");
   transition: 3s ease-out;
 }
+/* 
+@media screen and (max-width: 768px) {
+  .child2-right {
+    margin-top: 0;
+  }
+} */
+
 .grid {
-  width: 1200px;
+  /* width: 1200px; */
   height: 330px;
   margin: 100px auto 50px;
   display: flex;
@@ -91,6 +112,15 @@
   width: 700px;
   height: 150px;
   margin: auto;
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .quote {
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
 }
 .quote h2 {
   margin-top: 13px;

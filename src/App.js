@@ -9,19 +9,12 @@ import Porteng from "./Components/Porteng";
 import Portfolio from "./Components/Portfolio";
 import Finalcontact from "./Components/Finalcontact";
 import Contactus from "./Components/Contactus";
+import Router from "./routers/Router";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Home />
-      {/* <Portfolio /> */}
-      {/* <Aboutus /> */}
-      {/* <Portwed /> */}
-      {/* <Porteng /> */}
-      {/* <Contactus /> */}
-      {/* <Finalcontact /> */}
-      <Footer />
+      <Router />
     </div>
   );
 }

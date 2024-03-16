@@ -1,40 +1,59 @@
-import React from "react";
-import css from "./Header.css";
+import React, { useState } from "react";
+import "./Header.css";
 import signature from "../assets/signature.png";
+import { RiMenu3Line } from "react-icons/ri";
+import { IoClose } from "react-icons/io5";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
   return (
     <div className="Header">
       <div className="center">
         <div className="logo">
           <img src={signature} alt="" />
         </div>
-        <div className="menu">
-          <ul>
+        <div className="menu ">
+          <ul
+            style={{
+              transform: isMenuOpen ? "translateY(150px)" : "translateY(0%)",
+            }}
+          >
             <li>
-              <a href="#">Home</a>
+              <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <a href="#">About</a>
+              <NavLink to="/">About</NavLink>
             </li>
             <li className="dropdown">
-              <a href="#">Portfolio</a>
+              <NavLink to={"/"}>Portfolio</NavLink>
               <ul className="downcontent">
                 <li>
-                  <a href="#">Wedding</a>
+                  <NavLink to={"/"}>Weedings</NavLink>
                 </li>
                 <li>
-                  <a href="#">Engagement</a>
+                  <NavLink to={"/"}>Engagements</NavLink>
                 </li>
                 <li>
-                  <a href="#">Freelance</a>
+                  <NavLink to={"/"}>Freelance</NavLink>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <NavLink to={"/"}>Contact</NavLink>
             </li>
           </ul>
+        </div>
+
+        <div
+          className="menu-toggle flex items-center text-xl z-10 cursor-pointer"
+          onClick={toggleMenu}
+        >
+          {isMenuOpen ? <IoClose /> : <RiMenu3Line />}
         </div>
       </div>
     </div>
