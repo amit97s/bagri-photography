@@ -15,9 +15,9 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 const Footer = () => {
   const navigate = useNavigate();
   return (
-    <div>
+    <div className="mt-20">
       <div className="footer">
-        <div className="sections">
+        <div className="sections md:12">
           <img src={img1} alt="img1" />
         </div>
         <div className="sections">

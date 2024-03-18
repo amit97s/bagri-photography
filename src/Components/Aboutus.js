@@ -5,11 +5,11 @@ import wedding from "../assets/iaw.jpg";
 const Aboutus = () => {
   return (
     <>
-      <main className="flex justify-center flex-col md:flex-row items-center  px-10 gap-5 md:gap-32">
+      <main className="flex justify-center flex-col md:flex-row items-center  px-10 gap-5 md:gap-32 mt-10">
         <section>
           <img src={wedding} alt="weeding" className="h-[34rem]" />
         </section>
-        <section className="w-full sm:w-[30rem] shadow-lg py-4 px-4 rounded-md">
+        <section className="w-full sm:w-[30rem] py-4 px-4 rounded-md">
           <h1 className="underline text-green-600 py-1">About Me</h1>
           <p>
             Introducing myself to strangers through my lens is a dance of

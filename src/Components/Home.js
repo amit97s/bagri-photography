@@ -30,9 +30,13 @@ const Home = () => {
   return (
     <div className="parents">
       <div className="Home">
-        <Carousel interval={100000}>
+        <Carousel interval={1000}>
           <Carousel.Item>
-            <img className="d-block w-100" src={img1} alt="First slide" />
+            <img
+              className="d-block w-100 h-full"
+              src={img1}
+              alt="First slide"
+            />
             <Carousel.Caption>
               <h3>First slide label</h3>
               <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
@@ -57,7 +61,7 @@ const Home = () => {
         </Carousel>
       </div>
       ;
-      <section className="flex flex-col md:flex-row justify-center items-center px-20 gap-7 ">
+      <section className="flex flex-col md:flex-row justify-center items-center px-4  gap-7 ">
         <div>
           <h2 className="heading">
             Unveiling Timeless Stories Through My Lens
@@ -87,10 +91,10 @@ const Home = () => {
           />
         </div>
       </section>
-      <section className="flex justify-center mt-10">
+      <section className="flex flex-col justify-center sm:flex-row m-10 ">
         {img?.map((item, index) => {
           return (
-            <div key={index} className="flex ">
+            <div key={index} className="flex m-4 ">
               <img
                 src={item.src}
                 alt={item.alt}
