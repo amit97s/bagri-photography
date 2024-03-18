@@ -15,7 +15,8 @@
   background-color: red;
   overflow: hidden;
   position: relative;
-  z-index: 0;
+  z-index: -10;
+  /* margin-top: 2rem; */
 }
 .child2 {
   /* width: 1200px; */
@@ -33,20 +34,23 @@
 }
 .heading {
   margin-bottom: 20px;
-  font-family: "Playfair Display", serif;
+  /* font-family: "Playfair Display", serif; */
   font-optical-sizing: auto;
   font-weight: 600;
   text-decoration: underline;
   font-style: normal;
+  padding: 0px 40px;
 }
 
 @media screen and (max-width: 768px) {
   .heading {
     text-align: center;
+    padding: 0px 30px;
   }
 }
 .paragraph {
-  font-family: "Saira Semi Condensed", sans-serif;
+  /* font-family: "Saira Semi Condensed", sans-serif; */
+  padding: 0px 40px;
 }
 @media screen and (max-width: 768px) {
   .child2 {
@@ -120,6 +124,10 @@
     width: 100%;
     padding-right: 20px;
     padding-left: 20px;
+  }
+
+  .paragraph {
+    padding: 0px 30px;
   }
 }
 .quote h2 {

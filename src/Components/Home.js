@@ -30,7 +30,7 @@ const Home = () => {
   return (
     <div className="parents">
       <div className="Home">
-        <Carousel interval={1000}>
+        <Carousel interval={2000}>
           <Carousel.Item>
             <img
               className="d-block w-100 h-full"
@@ -61,7 +61,7 @@ const Home = () => {
         </Carousel>
       </div>
       ;
-      <section className="flex flex-col md:flex-row justify-center items-center px-4  gap-7 ">
+      <section className=" flex mt-10 flex-col md:flex-row justify-center items-center px-4 sm:px-20  gap-7 mb-20">
         <div>
           <h2 className="heading">
             Unveiling Timeless Stories Through My Lens
@@ -87,18 +87,21 @@ const Home = () => {
           <img
             src="https://images-pw.pixieset.com/sample_photos/sample-170_XL.jpg"
             alt="img"
-            className="w-[40rem] 2xl:w-full rounded-md object-contain"
+            className="w-[40rem] xl:w-[40rem] 2xl:w-[60rem] rounded-md object-contain"
           />
         </div>
       </section>
-      <section className="flex flex-col justify-center sm:flex-row m-10 ">
+      <section className="flex flex-col justify-center m-3 w-450:flex-row m w-450:m-20 overflow-hidden ">
         {img?.map((item, index) => {
           return (
-            <div key={index} className="flex m-4 ">
+            <div
+              key={index}
+              className="flex m-1 sm:m-4  duration-150 border-2 overflow-hidden mt-10 "
+            >
               <img
                 src={item.src}
                 alt={item.alt}
-                className="object-cover w-[30rem] h-80 "
+                className="object-cover  w-[40rem] h-44 md:w-[30rem] md:h-80 md:hover:scale-125 duration-200 "
               />
             </div>
           );
@@ -125,3 +128,5 @@ const Home = () => {
 };
 
 export default Home;
+
+//
