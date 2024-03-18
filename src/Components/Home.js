@@ -110,12 +110,12 @@ const Home = () => {
       </div>
       {/* <Header /> */}
       {/* <Home /> */}
-      <Portfolio />
-      <Aboutus />
-      <Portwed />
-      <Porteng />
-      <Contactus />
-      <Finalcontact />
+      {/* <Portfolio /> */}
+      {/* <Aboutus /> */}
+      {/* <Portwed />/ */}
+      {/* <Porteng /> */}
+      {/* <Contactus /> */}
+      {/* <Finalcontact /> */}
     </div>
   );
 };

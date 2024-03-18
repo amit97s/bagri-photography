@@ -27,24 +27,24 @@ const Header = () => {
               <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <NavLink to="/">About</NavLink>
+              <NavLink to="/about">About</NavLink>
             </li>
             <li className="dropdown">
               <NavLink to={"/"}>Portfolio</NavLink>
               <ul className="downcontent">
                 <li>
-                  <NavLink to={"/"}>Weedings</NavLink>
+                  <NavLink to={"/wedding"}>Weddings</NavLink>
                 </li>
                 <li>
-                  <NavLink to={"/"}>Engagements</NavLink>
+                  <NavLink to={"/engagements"}>Engagements</NavLink>
                 </li>
                 <li>
-                  <NavLink to={"/"}>Freelance</NavLink>
+                  <NavLink to={"/freelance"}>Freelance</NavLink>
                 </li>
               </ul>
             </li>
             <li>
-              <NavLink to={"/"}>Contact</NavLink>
+              <NavLink to={"/contact"}>Contact</NavLink>
             </li>
           </ul>
         </div>
