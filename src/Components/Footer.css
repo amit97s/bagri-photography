@@ -2,21 +2,34 @@
   width: 100%;
   height: 165px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 30px;
   margin-top: 55px;
+
   /* margin: auto; */
 }
 .sections {
-  width: 15.66%;
+  /* width: 100%; */
   height: 100%;
 }
+
 .sections img {
-  width: 100%;
-  height: 100%;
+  width: 250px;
+  height: 200px;
   object-fit: cover;
 
-  border: 4px solid black;
+  /* border: 2px solid black; */
+  border-radius: 8%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
   padding: 2px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* .sections {
+    width: 100%;
+    height: 100%;
+  } */
 }
 .bigie {
   width: 100%;

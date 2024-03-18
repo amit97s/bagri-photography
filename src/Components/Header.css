@@ -10,7 +10,7 @@ a {
 }
 .Header {
   background-color: #f4f4f4;
-  font-family: "Saira Semi Condensed", sans-serif;
+  /* font-family: "Saira Semi Condensed", sans-serif; */
   font-style: normal;
   letter-spacing: 2px;
 }
@@ -47,7 +47,7 @@ a {
 }
 .menu ul li {
   padding: 0px 20px;
-  font-weight: 700;
+  /* font-weight: 700; */
 }
 .menu ul li a {
   color: rgb(0, 0, 0);
