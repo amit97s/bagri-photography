@@ -6,7 +6,11 @@ import img3 from "../assets/3.jpg";
 import img4 from "../assets/4.jpg";
 import img5 from "../assets/5.jpg";
 import img6 from "../assets/6.jpg";
-
+import bimg35 from "../subassets/bagris images/_AJU3297.jpg";
+import bimg36 from "../subassets/bagris images/_AJU3359.jpg";
+import bimg37 from "../subassets/bagris images/_AJU3402.jpg";
+import bimg38 from "../subassets/bagris images/_AJU5382.jpg";
+import bimg39 from "../subassets/bagris images/_P0A1092.jpg";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
@@ -18,16 +22,16 @@ const Footer = () => {
     <div className="mt-32 sm:mt-20">
       <div className="footer">
         <div className="sections md:12">
-          <img src={img1} alt="img1" />
+          <img src={bimg36} alt="img1" />
         </div>
         <div className="sections">
-          <img src={img2} alt="img1" />
+          <img src={bimg37} alt="img1" />
         </div>
         <div className="sections">
-          <img src={img3} alt="img1" />
+          <img src={bimg38} alt="img1" />
         </div>
         <div className="sections">
-          <img src={img4} alt="img1" />
+          <img src={bimg39} alt="img1" />
         </div>
         {/* <div className="sections">
           <img src={img5} alt="img1" />

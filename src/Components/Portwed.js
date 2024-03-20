@@ -1,5 +1,12 @@
 import React from "react";
 import Portwedcss from "./Portwed.css";
+import { Carousel } from "@material-tailwind/react";
+import bimg22 from "../subassets/bagris images/_AJU0463.jpg";
+import bimg23 from "../subassets/bagris images/_AJU0468.jpg";
+import bimg24 from "../subassets/bagris images/_AJU0756 2.jpg";
+import bimg25 from "../subassets/bagris images/_AJU0756.jpg";
+import bimg26 from "../subassets/bagris images/_AJU0803.jpg";
+import bimg27 from "../subassets/bagris images/_AJU0863.jpg";
 
 const Portwed = () => {
   return (

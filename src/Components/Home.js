@@ -6,16 +6,16 @@ import img1 from "../assets/1.jpg";
 import img2 from "../assets/2.jpg";
 import img3 from "../assets/3.jpg";
 import bimg from "../subassets/bagris images/VISH3333.jpg";
-import bimg0 from "../subassets/bagris images/_AJU0011.jpg";
+// import bimg0 from "../subassets/bagris images/_AJU0011.jpg";
 import bimg1 from "../subassets/bagris images/_AJU0014.jpg";
 import bimg2 from "../subassets/bagris images/_AJU0038.jpg";
-import bimg3 from "../subassets/bagris images/_AJU0056-2.jpg";
+// import bimg3 from "../subassets/bagris images/_AJU0056-2.jpg";
 import bimg4 from "../subassets/bagris images/_AJU0059.jpg";
 import bimg5 from "../subassets/bagris images/_AJU0071-2.jpg";
 import bimg6 from "../subassets/bagris images/_AJU0071-2.jpg";
 import bimg7 from "../subassets/bagris images/_AJU0079.jpg";
 import bimg8 from "../subassets/bagris images/_AJU0100.jpg";
-import bimg9 from "../subassets/bagris images/_AJU0105.jpg";
+// import bimg9 from "../subassets/bagris images/_AJU0105.jpg";
 import bimg11 from "../subassets/bagris images/_AJU0109.jpg";
 import bimg12 from "../subassets/bagris images/_AJU0115 2.jpg";
 import bimg13 from "../subassets/bagris images/_AJU0115.jpg";
@@ -54,15 +54,15 @@ import Finalcontact from "./Finalcontact";
 const Home = () => {
   const img = [
     {
-      src: "https://pics.craiyon.com/2023-06-21/19dfc7a611ea4caf9356a83770a834a8.webp",
+      src: bimg11,
       alt: "img1",
     },
     {
-      src: "https://i.pinimg.com/564x/a2/97/64/a2976488280f2552783e63fc73957cff.jpg",
+      src: bimg12,
       alt: "img1",
     },
     {
-      src: "https://i.pinimg.com/564x/6f/0a/7a/6f0a7a8c3490fa3f9782be268047d6cb.jpg",
+      src: bimg14,
       alt: "img1",
     },
   ];
@@ -74,7 +74,7 @@ const Home = () => {
           <Carousel.Item>
             <img
               className="d-block w-100 h-full"
-              src={bimg9}
+              src={bimg11}
               alt="First slide"
             />
             <Carousel.Caption>
@@ -125,9 +125,9 @@ const Home = () => {
 
         <div>
           <img
-            src="https://images-pw.pixieset.com/sample_photos/sample-170_XL.jpg"
+            src={bimg17}
             alt="img"
-            className="w-[40rem] xl:w-[40rem] 2xl:w-[60rem] rounded-md object-contain"
+            className="w-[40rem] xl:w-[40rem] 2xl:w-[60rem] rounded-md object-cover"
           />
         </div>
       </section>

@@ -1,7 +1,6 @@
 .engagement {
   /* width: 1200px; */
   height: auto;
-  border: 1px solid black;
   margin: 100px auto 0px;
 }
 .engagement-head {
@@ -11,7 +10,6 @@
 }
 .engagement-background {
   width: 100%;
-  height: 550px;
+  height: 100vh;
   border: 1px solid black;
-  background-color: black;
 }
