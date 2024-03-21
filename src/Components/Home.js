@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import homecss from "./Home.css";
 import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -51,119 +51,133 @@ import Portwed from "./Portwed";
 import Porteng from "./Porteng";
 import Contactus from "./Contactus";
 import Finalcontact from "./Finalcontact";
+
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import Activities from "./Activities";
 const Home = () => {
-  const img = [
-    {
-      src: bimg11,
-      alt: "img1",
-    },
-    {
-      src: bimg12,
-      alt: "img1",
-    },
-    {
-      src: bimg14,
-      alt: "img1",
-    },
+
+  const images = [
+    { name: "pic-1", src: bimg11 },
+    { name: "pic-2", src: bimg12 },
+    { name: "pic-3", src: bimg14 },
+    { name: "pic-4", src: bimg23 },
   ];
+  const [currentSlide, setCurrentSlide] = useState(0);
 
+  const handlePrev = () => {
+    setCurrentSlide(
+      (prevSlide) => (prevSlide - 1 + images.length) % images.length
+    );
+  };
+
+  const handleNext = () => {
+    setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);
+  };
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      handleNext();
+    }, 3000);
+
+    return () => clearInterval(intervalId);
+  }, [currentSlide]);
   return (
-    <div className="parents">
-      <div className="Home">
-        <Carousel interval={2000}>
-          <Carousel.Item>
-            <img
-              className="d-block w-100 h-full"
-              src={bimg11}
-              alt="First slide"
-            />
-            <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img className=" d-block w-100" src={bimg2} alt="Second slide" />
-            <Carousel.Caption>
-              <h3>Second slide label</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img className="d-block w-100" src={bimg1} alt="Third slide" />
-            <Carousel.Caption>
-              <h3>Third slide label</h3>
-              <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-              </p>
-            </Carousel.Caption>
-          </Carousel.Item>
-        </Carousel>
-      </div>
-      ;
-      <section className=" flex mt-10 flex-col md:flex-row justify-center items-center px-4 sm:px-20  gap-7 mb-20">
-        <div>
-          <h2 className="heading">
-            Unveiling Timeless Stories Through My Lens
-          </h2>
-          <p className="paragraph">
-            "Discover a visual journey beyond the ordinary at.
-            <br />
-            Our lens doesn't just freeze moments; it distills the very essence
-            of emotions, weaving a tapestry of stories in every frame.
-            <br /> Embrace the art of storytelling through captivating imagery,
-            <br />
-            where each photograph is a portal to a cherished memory. Join us in
-            celebrating life's extraordinary moments,
-            <br /> beautifully encapsulated in pixels. Welcome to a world where
-            passion <br />
-            meets precision, and each click is a timeless expression of the
-            soul. Explore, experience, and let your story unfold
-            <br /> in the enchanting gallery of Captured Essence".
-          </p>
-        </div>
-
-        <div>
-          <img
-            src={bimg17}
-            alt="img"
-            className="w-[40rem] xl:w-[40rem] 2xl:w-[60rem] rounded-md object-cover"
-          />
-        </div>
-      </section>
-      <section className="flex flex-col justify-center m-3 w-450:flex-row m w-450:m-20 overflow-hidden ">
-        {img?.map((item, index) => {
-          return (
+    <>
+      <div className=" relative mx-auto overflow-hidden max-w-screen-xl -z-30">
+        <div
+          className=" w-full flex transition-transform duration-500 ease-in-out"
+          style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+        >
+          {images.map((image, index) => (
             <div
               key={index}
-              className="flex m-1 sm:m-4  duration-150 border-2 overflow-hidden mt-10 "
+              className="relative flex-shrink-0 w-full select-none"
             >
               <img
-                src={item.src}
-                alt={item.alt}
-                className="object-cover  w-[40rem] h-44 md:w-[30rem] md:h-80 md:hover:scale-125 duration-200 "
+                src={image.src}
+                alt={image.name}
+                className="w-full h-60 sm:h-[30rem] object-cover -z-30"
               />
             </div>
-          );
-        })}
-      </section>
-      <div className="quote">
-        <h2>
-          "Through the lens of life, every moment is a masterpiece <br />
-          waiting to be captured, painting the canvas
-          <br /> of memories with the brushstrokes of light and shadow."
-        </h2>
-        <span className="span">-</span> <p>Roland Barthes</p>
+          ))}
+        </div>
+        <IoIosArrowBack
+          className="prev-button absolute left-0 top-1/2 transform -translate-y-1/2 cursor-pointer text-color_gray  text-xl sm:text-2xl md:text-5xl"
+          onClick={handlePrev}
+        ></IoIosArrowBack>
+        <IoIosArrowForward
+          className="next-button absolute right-0 top-1/2 transform -translate-y-1/2 cursor-pointer text-color_gray text-xl sm:text-2xl md:text-5xl"
+          onClick={handleNext}
+        ></IoIosArrowForward>
       </div>
-      {/* <Header /> */}
-      {/* <Home /> */}
-      {/* <Portfolio /> */}
-      {/* <Aboutus /> */}
-      {/* <Portwed />/ */}
-      {/* <Porteng /> */}
-      {/* <Contactus /> */}
-      {/* <Finalcontact /> */}
-    </div>
+      <div className="parents">
+        ;
+        <section className=" flex mt-10 flex-col md:flex-row justify-center items-center px-1 sm:px-20  gap-7 mb-20">
+          <div>
+            <h2 className="heading">
+              Unveiling Timeless Stories Through My Lens
+            </h2>
+            <p className="paragraph">
+              "Discover a visual journey beyond the ordinary at.
+              <br />
+              Our lens doesn't just freeze moments; it distills the very essence
+              of emotions, weaving a tapestry of stories in every frame.
+              <br /> Embrace the art of storytelling through captivating
+              imagery,
+              <br />
+              where each photograph is a portal to a cherished memory. Join us
+              in celebrating life's extraordinary moments,
+              <br /> beautifully encapsulated in pixels. Welcome to a world
+              where passion <br />
+              meets precision, and each click is a timeless expression of the
+              soul. Explore, experience, and let your story unfold
+              <br /> in the enchanting gallery of Captured Essence".
+            </p>
+          </div>
+
+          <div className="flex items-center justify-center">
+            <img
+              src={bimg17}
+              alt="img"
+              className="w-[18rem] sm:w-[22rem] xl:w-[40rem] 2xl:w-[60rem] rounded-md object-cover"
+            />
+          </div>
+        </section>
+        <section className="flex flex-col justify-center m-3 w-450:flex-row m w-450:m-20 overflow-hidden ">
+          {images?.map((item, index) => {
+            return (
+              <div
+                key={index}
+                className="flex m-1 sm:m-4  duration-150 border-2 overflow-hidden mt-10 "
+              >
+                <img
+                  src={item?.src}
+                  alt={item?.name}
+                  className="object-cover  w-[40rem] h-44 md:w-[30rem] md:h-80 md:hover:scale-125 duration-200 "
+                />
+              </div>
+            );
+          })}
+        </section>
+        <div className="quote">
+          <h2>
+            "Through the lens of life, every moment is a masterpiece <br />
+            waiting to be captured, painting the canvas
+            <br /> of memories with the brushstrokes of light and shadow."
+          </h2>
+          <span className="span">-</span> <p>Roland Barthes</p>
+        </div>
+        <Activities />
+        {/* <Header /> */}
+        {/* <Home /> */}
+        {/* <Portfolio /> */}
+        {/* <Aboutus /> */}
+        {/* <Portwed />/ */}
+        {/* <Porteng /> */}
+        {/* <Contactus /> */}
+        {/* <Finalcontact /> */}
+      </div>
+    </>
   );
 };
 

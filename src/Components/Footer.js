@@ -12,8 +12,7 @@ import bimg37 from "../subassets/bagris images/_AJU3402.jpg";
 import bimg38 from "../subassets/bagris images/_AJU5382.jpg";
 import bimg39 from "../subassets/bagris images/_P0A1092.jpg";
 import { FaFacebook } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa6";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaInstagram, FaXTwitter } from "react-icons/fa6";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 
 const Footer = () => {
