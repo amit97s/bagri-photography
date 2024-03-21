@@ -20,7 +20,7 @@ const Footer = () => {
   const navigate = useNavigate();
   return (
     <div className="mt-32 sm:mt-20">
-      <div className="footer">
+      <div className="footer ">
         <div className="sections md:12">
           <img src={bimg36} alt="img1" />
         </div>
