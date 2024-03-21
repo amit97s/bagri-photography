@@ -12,35 +12,13 @@ import bimg37 from "../subassets/bagris images/_AJU3402.jpg";
 import bimg38 from "../subassets/bagris images/_AJU5382.jpg";
 import bimg39 from "../subassets/bagris images/_P0A1092.jpg";
 import { FaFacebook } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa6";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaInstagram, FaXTwitter } from "react-icons/fa6";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 
 const Footer = () => {
   const navigate = useNavigate();
   return (
-    <div className="mt-32 sm:mt-20">
-      <div className="footer">
-        <div className="sections md:12">
-          <img src={bimg36} alt="img1" />
-        </div>
-        <div className="sections">
-          <img src={bimg37} alt="img1" />
-        </div>
-        <div className="sections">
-          <img src={bimg38} alt="img1" />
-        </div>
-        <div className="sections">
-          <img src={bimg39} alt="img1" />
-        </div>
-        {/* <div className="sections">
-          <img src={img5} alt="img1" />
-        </div>
-        <div className="sections">
-          <img src={img6} alt="img1" />
-        </div> */}
-      </div>
-
+    <div className=" sm:mt-20">
       <section className="bg-blue-600">
         <section className=" flex items-center justify-between px-5 py-14 mt-5">
           <div className="flex flex-col md:flex-row gap-4 items-center font-medium no-underline text-white">

@@ -15,7 +15,7 @@ const Header = () => {
     <div className="Header">
       <div className="center">
         <div className="logo">
-          <img src={signature} alt="" />
+          <img src={signature} alt="" className="w-40" />
         </div>
         <div className="menu ">
           <ul
