@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import img from "../subassets/bagris images/_AJU1479.jpg";
 
 import { IoIosArrowRoundForward } from "react-icons/io";
-import { IoIosInformationCircle } from "react-icons/io";
+// import { IoIosInformationCircle } from "react-icons/io";
 import { MdLocalPhone } from "react-icons/md";
 
 import callUs from "../assets/callus.png";

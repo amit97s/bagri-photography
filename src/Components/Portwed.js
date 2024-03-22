@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
-import Portwedcss from "./Portwed.css";
-import bimg22 from "../subassets/bagris images/_AJU0463.jpg";
+// import Portwedcss from "./Portwed.css";
+// import bimg22 from "../subassets/bagris images/_AJU0463.jpg";
 import bimg23 from "../subassets/bagris images/_AJU0468.jpg";
-import bimg24 from "../subassets/bagris images/_AJU0756 2.jpg";
-import bimg25 from "../subassets/bagris images/_AJU0756.jpg";
-import bimg26 from "../subassets/bagris images/_AJU0803.jpg";
-import bimg27 from "../subassets/bagris images/_AJU0863.jpg";
+// import bimg24 from "../subassets/bagris images/_AJU0756 2.jpg";
+// import bimg25 from "../subassets/bagris images/_AJU0756.jpg";
+// import bimg26 from "../subassets/bagris images/_AJU0803.jpg";
+// import bimg27 from "../subassets/bagris images/_AJU0863.jpg";
 import { Carousel } from "react-bootstrap";
 
 import bimg11 from "../subassets/bagris images/_AJU0109.jpg";
-import bimg1 from "../subassets/bagris images/_AJU0014.jpg";
+// import bimg1 from "../subassets/bagris images/_AJU0014.jpg";
 import bimg2 from "../subassets/bagris images/_AJU0038.jpg";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 

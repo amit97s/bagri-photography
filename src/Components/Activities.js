@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { MdEmojiEvents } from "react-icons/md";
+// import { MdEmojiEvents } from "react-icons/md";
 import { activityImages } from "./ActivityImages";
 import { FcVideoCall } from "react-icons/fc";
 
