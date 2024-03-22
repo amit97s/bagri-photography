@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import "./Home.css";
 // import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -63,15 +63,15 @@ const Home = () => {
   ];
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const handlePrev = () => {
+  const handlePrev = useCallback(() => {
     setCurrentSlide(
       (prevSlide) => (prevSlide - 1 + images.length) % images.length
     );
-  };
+  }, [images.length]);
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);
-  };
+  }, [images.length]);
 
   useEffect(() => {
     const intervalId = setInterval(() => {

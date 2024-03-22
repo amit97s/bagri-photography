@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 // import Portwedcss from "./Portwed.css";
 // import bimg22 from "../subassets/bagris images/_AJU0463.jpg";
 import bimg23 from "../subassets/bagris images/_AJU0468.jpg";
@@ -23,15 +23,15 @@ const Portwed = () => {
     { name: "pic-4", src: bimg23 },
   ];
 
-  const handlePrev = () => {
+  const handlePrev = useCallback(() => {
     setCurrentSlide(
       (prevSlide) => (prevSlide - 1 + images.length) % images.length
     );
-  };
+  }, [images.length]);
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);
-  };
+  }, [images.length]);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -39,42 +39,10 @@ const Portwed = () => {
     }, 3000);
 
     return () => clearInterval(intervalId);
-  }, [currentSlide, handleNext, handlePrev]);
+  }, [currentSlide, handleNext]);
 
   return (
     <div className="Portwed">
-      {/* <div className="">
-        <Carousel interval={2000}>
-          <Carousel.Item>
-            <img
-              className="d-block w-100 h-full"
-              src={bimg11}
-              alt="First slide"
-            />
-            <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img className=" d-block w-100" src={bimg2} alt="Second slide" />
-            <Carousel.Caption>
-              <h3>Second slide label</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img className="d-block w-100" src={bimg1} alt="Third slide" />
-            <Carousel.Caption>
-              <h3>Third slide label</h3>
-              <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-              </p>
-            </Carousel.Caption>
-          </Carousel.Item>
-        </Carousel>
-      </div> */}
-
       <div className=" relative mx-auto overflow-hidden max-w-screen-xl -z-30">
         <div
           className=" w-full flex transition-transform duration-500 ease-in-out"
