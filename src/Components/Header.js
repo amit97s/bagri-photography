@@ -44,7 +44,12 @@ const Header = () => {
               </ul>
             </li>
             <li>
-              <NavLink to={"/contact"}>Contact</NavLink>
+              <NavLink
+                to={"/contact"}
+                className={"bg-[#111111] text-white px-3 py-2 rounded"}
+              >
+                Contact
+              </NavLink>
             </li>
           </ul>
         </div>

@@ -18,9 +18,9 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 const Footer = () => {
   const navigate = useNavigate();
   return (
-    <section className="bg-blue-600">
+    <section className="bg-[#111111] mx-auto overflow-hidden max-w-screen-xl">
       <section className=" flex items-center justify-between px-5 py-14 mt-5">
-        <div className="flex flex-col md:flex-row gap-4 items-center font-medium no-underline text-white">
+        <div className="flex flex-col md:flex-row gap-4 items-center  no-underline text-white">
           <div> Home</div>
           <div> About</div>
           <div> Investment</div>
@@ -45,8 +45,8 @@ const Footer = () => {
           <FaXTwitter size={25} className="hover:text-black" />
         </div>
       </section>
-      <h1 className="text-center text-white text-base pb-5">
-        All content is copyright &copy; 2024 TH amit manral
+      <h1 className="text-center text-white text-base font-normal pb-5">
+        All content is copyright &copy; 2024 Bajrang Bagri Photography
       </h1>
     </section>
   );
