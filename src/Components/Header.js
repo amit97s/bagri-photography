@@ -20,7 +20,7 @@ const Header = () => {
         <div className="menu ">
           <ul
             style={{
-              transform: isMenuOpen ? "translateY(150px)" : "translateY(0%)",
+              transform: isMenuOpen ? "translateY(150px)" : "translateY(-17%)",
             }}
           >
             <li>

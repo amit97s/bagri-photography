@@ -18,15 +18,25 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 const Footer = () => {
   const navigate = useNavigate();
   return (
-    <section className="bg-[#111111] mx-auto overflow-hidden max-w-screen-xl">
+    <section className="bg-[#111111] mx-auto overflow-hidden max-w-screen-xl mt-3">
       <section className=" flex items-center justify-between px-5 py-14 mt-5">
         <div className="flex flex-col md:flex-row gap-4 items-center  no-underline text-white">
-          <div> Home</div>
-          <div> About</div>
-          <div> Investment</div>
-          <div> Portfolio</div>
-          <div> Client</div>
-          <div> Contact</div>
+          <NavLink to={"/"} className={"text-white no-underline"}>
+            {" "}
+            Home
+          </NavLink>
+          <NavLink to={"/about"} className={"text-white no-underline"}>
+            {" "}
+            About
+          </NavLink>
+          <NavLink to={"/"} className={"text-white no-underline"}>
+            {" "}
+            Portfolio
+          </NavLink>
+          <NavLink to={"/contact"} className={"text-white no-underline"}>
+            {" "}
+            Contact
+          </NavLink>
         </div>
         <div className="flex gap-3 items-center text-white">
           <FaFacebook size={25} className="hover:text-blue-700" />
