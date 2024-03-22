@@ -79,7 +79,7 @@ const Home = () => {
     }, 3000);
 
     return () => clearInterval(intervalId);
-  }, [currentSlide]);
+  }, [currentSlide, handleNext, handlePrev]);
   return (
     <>
       <div className=" relative mx-auto overflow-hidden max-w-screen-xl -z-30">

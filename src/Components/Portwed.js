@@ -39,7 +39,7 @@ const Portwed = () => {
     }, 3000);
 
     return () => clearInterval(intervalId);
-  }, [currentSlide]);
+  }, [currentSlide, handleNext, handlePrev]);
 
   return (
     <div className="Portwed">
