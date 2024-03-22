@@ -6,7 +6,7 @@ import bimg23 from "../subassets/bagris images/_AJU0468.jpg";
 // import bimg25 from "../subassets/bagris images/_AJU0756.jpg";
 // import bimg26 from "../subassets/bagris images/_AJU0803.jpg";
 // import bimg27 from "../subassets/bagris images/_AJU0863.jpg";
-import { Carousel } from "react-bootstrap";
+// import { Carousel } from "react-bootstrap";
 
 import bimg11 from "../subassets/bagris images/_AJU0109.jpg";
 // import bimg1 from "../subassets/bagris images/_AJU0014.jpg";
