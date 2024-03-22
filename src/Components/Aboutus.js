@@ -61,7 +61,7 @@ const Aboutus = () => {
       </main>
 
       <div className="slider">
-        <img src={bimg19} className="sliderimg" />
+        <img src={bimg19} className="sliderimg" alt="slider" />
       </div>
       <div className="contact-me ">
         <span style={{ fontFamily: "monospace" }}>Contact me</span>

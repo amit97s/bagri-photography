@@ -38,58 +38,58 @@ const Portfolio = () => {
       <div className="portfoliopage-center">
         <div className="portfoliopage-center-div">
           <div className="portfoliopage-center-div1">
-            <img src={images1} />
+            <img src={images1} alt="img1" />
           </div>
           <div className="portfoliopage-center-div1">
-            <img src={images2} />
+            <img src={images2} alt="img2" />
           </div>
         </div>
         <div className="portfoliopage-center-div">
           <div className="portfoliopage-center-div2">
-            <img src={images3} />
+            <img src={images3} alt="img3" />
           </div>
           <div className="portfoliopage-center-div2">
-            <img src={images4} />
+            <img src={images4} alt="img4" />
           </div>
           <div className="portfoliopage-center-div2">
-            <img src={images5} />
+            <img src={images5} alt="img5" />
           </div>
         </div>
         <div className="portfoliopage-center-div">
           <div className="portfoliopage-center-div31">
-            <img src={images6} />
+            <img src={images6} alt="img6" />
           </div>
           <div className="portfoliopage-center-div32">
-            <img src={images7} />
+            <img src={images7} alt="img7" />
           </div>
           <div className="portfoliopage-center-div33">
-            <img src={images8} />
+            <img src={images8} alt="img8" />
           </div>
         </div>
         <div className="portfoliopage-center-div">
           <div className="portfoliopage-center-div4">
-            <img src={images9} />
+            <img src={images9} alt="img9" />
           </div>
           <div className="portfoliopage-center-div4">
-            <img src={images10} />
+            <img src={images10} alt="img10" />
           </div>
           <div className="portfoliopage-center-div4">
-            <img src={images11} />
+            <img src={images11} alt="img10" />
           </div>
           <div className="portfoliopage-center-div4">
-            <img src={images16} />
+            <img src={images16} alt="img10" />
           </div>
         </div>
         <div className="portfoliopage-center-div">
           <div className="portfoliopage-center-div5">
-            <img src={images13} />
+            <img src={images13} alt="img10" />
           </div>
           <div className="portfoliopage-center-div5">
             <div className="portfoliopage-center-div5sub1">
-              <img src={images14} />
+              <img src={images14} alt="img10" />
             </div>
             <div className="portfoliopage-center-div5sub2">
-              <img src={images11} />
+              <img src={images11} alt="img10" />
             </div>
           </div>
         </div>

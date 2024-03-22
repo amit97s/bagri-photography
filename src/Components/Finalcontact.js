@@ -267,7 +267,7 @@ const Finalcontact = () => {
           </div>
 
           <div className="mr-32 hidden md:block">
-            <img src={callUs} alt="" className="h-60" />
+            <img src={callUs} alt="callus" className="h-60" />
           </div>
         </section>
       </main>

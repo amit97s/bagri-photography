@@ -31,7 +31,7 @@ const Porteng = () => {
           </p>
         </div>
         <div className="engagement-background">
-          <img src={bimg28} className="w-full h-full object-cover" />
+          <img src={bimg28} alt="bimg" className="w-full h-full object-cover" />
         </div>
       </div>
     </div>
