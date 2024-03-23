@@ -55,7 +55,7 @@ const Header = () => {
         </div>
 
         <div
-          className="menu-toggle flex items-center text-xl z-10 cursor-pointer"
+          className="menu-toggle flex items-center text-xl z-[999] cursor-pointer"
           onClick={toggleMenu}
         >
           {isMenuOpen ? <IoClose /> : <RiMenu3Line />}
