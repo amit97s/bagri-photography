@@ -48,7 +48,7 @@ const Finalcontact = () => {
 
   return (
     <>
-      <main className="mx-auto overflow-hidden max-w-screen-xl ">
+      <main className="mx-auto overflow-hidden max-w-screen-xl -z-10">
         <div className="relative ">
           <img
             style={{ filter: "brightness(50%)" }}
@@ -255,7 +255,7 @@ const Finalcontact = () => {
           </div>
         </section>
 
-        <section className="bg-white py-5 flex items-center justify-around ">
+        <section className="bg-gray-100  py-5 flex items-center justify-around px-5 shadow-md rounded-md ">
           <div className=" m-auto md:ml-32">
             <h1 className="flex items-center gap-2 font-bold ">
               You can directly call us!
