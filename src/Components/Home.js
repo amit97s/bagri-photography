@@ -142,21 +142,56 @@ const Home = () => {
             />
           </div>
         </section>
-        <section className="flex flex-col justify-center m-3 w-450:flex-row m w-450:m-20 overflow-hidden ">
-          {images?.map((item, index) => {
-            return (
-              <div
-                key={index}
-                className="flex m-1 sm:m-4  duration-150 border-2 overflow-hidden mt-10 "
-              >
-                <img
-                  src={item?.src}
-                  alt={item?.name}
-                  className="object-cover  w-[40rem] h-44 md:w-[30rem] md:h-80 md:hover:scale-125 duration-200 "
-                />
-              </div>
-            );
-          })}
+        <section className="flex flex-col items-center ">
+          <div className="flex flex-col sm:flex-row">
+            <div className="relative">
+              <img
+                src={bimg11}
+                alt="img"
+                className="w-full sm:w-60 md:w-80 lg:w-[30rem]"
+                style={{ filter: "brightness(40%)" }}
+              />
+              <button className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  outline-none border border-white px-2 py-1.5 bg-transparent text-white rounded-md hover:bg-white hover:text-black">
+                view more
+              </button>
+            </div>
+
+            <div className="relative">
+              <img
+                src={bimg12}
+                alt="img"
+                className="w-full sm:w-60 md:w-80 lg:w-[30rem]"
+                style={{ filter: "brightness(40%)" }}
+              />
+              <button className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  outline-none border border-white px-2 py-1.5 bg-transparent text-white rounded-md hover:bg-white hover:text-black">
+                view more
+              </button>
+            </div>
+          </div>
+          <div className="flex flex-col sm:flex-row">
+            <div className="relative">
+              <img
+                src={bimg14}
+                alt="img"
+                className="w-full sm:w-60 md:w-80 lg:w-[30rem]"
+                style={{ filter: "brightness(40%)" }}
+              />
+              <button className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 outline-none border border-white px-2 py-1.5 bg-transparent text-white rounded-md hover:bg-white hover:text-black">
+                view more
+              </button>
+            </div>
+            <div className="relative">
+              <img
+                src={bimg23}
+                alt="img"
+                className="w-full sm:w-60 md:w-80 lg:w-[30rem]"
+                style={{ filter: "brightness(40%)" }}
+              />
+              <button className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  outline-none border border-white px-2 py-1.5 bg-transparent text-white rounded-md hover:bg-white hover:text-black">
+                view more
+              </button>
+            </div>
+          </div>
         </section>
         <div className="quote">
           <h2>

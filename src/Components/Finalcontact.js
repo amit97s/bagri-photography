@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import img from "../subassets/bagris images/_AJU1479.jpg";
 
-import { IoIosArrowRoundForward } from "react-icons/io";
+// import { IoIosArrowRoundForward } from "react-icons/io";
 // import { IoIosInformationCircle } from "react-icons/io";
 import { MdLocalPhone } from "react-icons/md";
 
@@ -14,10 +14,15 @@ const Finalcontact = () => {
   const [budget, setBudget] = useState("");
   const [city, setCity] = useState("");
   const [message, setMessage] = useState("");
+  const [postWedding, setPostWedding] = useState(false);
+  const [wedding, setWedding] = useState(false);
+  const [preWedding, setPreWedding] = useState(false);
+
   const [error, setError] = useState({});
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const phoneRegex = /^\d{10}$/;
+  const budgetRegex = /^\d+$/;
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -33,13 +38,18 @@ const Finalcontact = () => {
     if (!phone.trim() || !phoneRegex.test(phone)) {
       errors.phone = "Please enter a valid phone number";
     }
+    if (!budget.trim() || !budgetRegex.test(budget)) {
+      errors.budget = "Please enter a valid budget amount";
+    }
     if (!budget.trim()) {
       errors.budget = "Please select a budget";
     }
     if (!city.trim()) {
       errors.city = "Please select a city";
     }
-
+    if (!preWedding && !postWedding && !wedding) {
+      errors.checkbox = "Please select at least one option";
+    }
     setError(errors);
 
     if (Object.keys(errors).length === 0) {
@@ -54,10 +64,17 @@ const Finalcontact = () => {
             style={{ filter: "brightness(50%)" }}
             src={img}
             alt="img"
-            className="w-screen h-[25rem] lg:h-[38rem] object-cover   "
+            className="w-screen h-[25rem] lg:h-[46rem] object-cover   "
           />
-          <div className=" relative w-full top-2 right-0 bg-white lg:shadow-lg rounded-md lg:w-[28rem] p-4 lg:absolute lg:right-10 lg:top-7  ">
-            <form className="flex flex-col gap-2.5" onSubmit={handleSubmit}>
+          <div className=" relative w-full top-[2px] right-0 bg-white lg:shadow-lg rounded-md lg:w-[28rem] p-4 lg:absolute lg:right-10 lg:top-7  ">
+            <form className="flex flex-col gap-1.5" onSubmit={handleSubmit}>
+              <h1 className="text-lg font-bold">
+                Get in Touch with bagri photography
+              </h1>
+              <p className="text-sm ">
+                Interested in a photoshoot? Want to discuss your photography
+                needs? Feel free to send us a message using the form below!
+              </p>
               <div className="flex items-center gap-2">
                 <div className="w-1/2">
                   <label
@@ -69,12 +86,10 @@ const Finalcontact = () => {
                   <input
                     type="text"
                     id="UserName"
-                    placeholder={error.name || "John Doe"}
+                    placeholder={"John Doe"}
                     value={name}
                     onChange={(event) => setName(event.target.value)}
-                    className={`mt-1 w-full rounded-md sm:text-sm outline-none border py-2.5 px-2 ${
-                      error.name ? "border-red-600" : ""
-                    }`}
+                    className={`mt-1 w-full rounded-md sm:text-sm outline-none border py-2.5 px-2 `}
                   />
                   {error.name && (
                     <p className="text-red-500 text-xs">{error.name}</p>
@@ -90,11 +105,11 @@ const Finalcontact = () => {
                   <input
                     type="email"
                     id="UserEmail"
-                    placeholder={error.email || "amitmanral@gmail.com"}
+                    placeholder={"johndoe@gmail.com"}
                     value={email}
                     onChange={(event) => setEmail(event.target.value)}
-                    className={`mt-1 w-full rounded-md sm:text-sm outline-none border py-2.5 px-2 ${
-                      error.email ? "border-red-600" : ""
+                    className={`mt-1 w-full rounded-md sm:text-sm outline-none border py-2.5 px-2 
+                   
                     }`}
                   />
                   {error.email && (
@@ -102,28 +117,27 @@ const Finalcontact = () => {
                   )}
                 </div>
               </div>
-              <div>
-                <label
-                  htmlFor="UserPhone"
-                  className="block text-sm font-medium text-gray-700"
-                >
-                  Phone*
-                </label>
-                <input
-                  type="text"
-                  id="UserPhone"
-                  placeholder={error.phone || "+91 1234567890"}
-                  value={phone}
-                  onChange={(event) => setPhone(event.target.value)}
-                  className={`mt-1 w-full rounded-md sm:text-sm outline-none border py-2.5 px-2 ${
-                    error.phone ? "border-red-600" : ""
-                  }`}
-                />
-                {error.phone && (
-                  <p className="text-red-500 text-xs">{error.phone}</p>
-                )}
-              </div>
-              <div className="flex items-center gap-2">
+              <div className="w-full flex items-center gap-2">
+                <div className="w-1/2">
+                  <label
+                    htmlFor="UserPhone"
+                    className="block text-sm font-medium text-gray-700"
+                  >
+                    Phone*
+                  </label>
+                  <input
+                    type="text"
+                    id="UserPhone"
+                    placeholder={"+91 1234567890"}
+                    value={phone}
+                    onChange={(event) => setPhone(event.target.value)}
+                    className={`mt-1 w-full rounded-md sm:text-sm outline-none border py-2.5 px-2 `}
+                  />
+                  {error.phone && (
+                    <p className="text-red-500 text-xs">{error.phone}</p>
+                  )}
+                </div>
+
                 <div className="w-1/2">
                   <label
                     htmlFor="Budget"
@@ -131,26 +145,22 @@ const Finalcontact = () => {
                   >
                     Budget*
                   </label>
-                  <select
-                    id="Budget"
+                  <input
+                    type="text"
+                    id="budget"
+                    placeholder={"please select your budget"}
                     value={budget}
                     onChange={(event) => setBudget(event.target.value)}
-                    className={`mt-1 w-full rounded-md sm:text-sm outline-none border py-2.5 px-2 ${
-                      error.budget ? "border-red-600" : ""
-                    }`}
-                  >
-                    <option value="">Select budget</option>
-                    <option value="100">$100</option>
-                    <option value="200">$200</option>
-                    <option value="300">$300</option>
-                    <option value="400">$400</option>
-                    <option value="500">$500</option>
-                  </select>
+                    className={`mt-1 w-full rounded-md sm:text-sm outline-none border py-2.5 px-2 `}
+                  />
                   {error.budget && (
                     <p className="text-red-500 text-xs">{error.budget}</p>
                   )}
                 </div>
-                <div className="w-1/2">
+              </div>
+
+              <div className="flex items-center gap-2">
+                <div className="w-full">
                   <label
                     htmlFor="City"
                     className="block text-sm font-medium text-gray-900"
@@ -179,6 +189,48 @@ const Finalcontact = () => {
                   )}
                 </div>
               </div>
+
+              <label
+                htmlFor="Budget"
+                className="block text-sm font-medium text-gray-900"
+              >
+                Services*
+              </label>
+              <div className="flex flex-col w-450:flex-row w-450:items-center gap-3 text-sm py-2">
+                <div className="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    id="preWedding"
+                    checked={preWedding}
+                    onChange={(event) => setPreWedding(event.target.checked)}
+                  />
+                  <label htmlFor="preWedding">pre wedding</label>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    id="postWedding"
+                    checked={postWedding}
+                    onChange={(event) => setPostWedding(event.target.checked)}
+                  />
+                  <label htmlFor="postWedding">post wedding</label>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    id="wedding"
+                    checked={wedding}
+                    onChange={(event) => setWedding(event.target.checked)}
+                  />
+                  <label htmlFor="wedding">wedding</label>
+                </div>
+              </div>
+              {error.checkbox && (
+                <p className="text-red-500 text-xs">{error.checkbox}</p>
+              )}
+
               <div>
                 <label
                   htmlFor="Message"
@@ -207,53 +259,19 @@ const Finalcontact = () => {
           </div>
 
           <div className="absolute  top-24 lg:top-52 left-0 p-3 w-full    lg:w-[44rem]">
-            <h1 className=" text-white text-xl sm:text-3xl ">
-              Find The Perfect
+            <h1 className=" text-white text-xl sm:text-5xl font-semibold ">
+              Discover Your Ideal
             </h1>
             <h1 className=" text-white text-xl sm:text-3xl ">
               WEDDING PHOTOGRAPHER
             </h1>
             <p className="text-white mt-4 sm:text-xl w-fit sm:w-[40rem] lg:w-10/12 ">
-              Fill in your requirements sowe can help find the right Wedding
-              Photographer for you
+              Share preferences, find perfect wedding photographer. Capture
+              every moment beautifully, tailored to your style and vision. Let's
+              make your day unforgettable
             </p>
           </div>
         </div>
-
-        <section className="p-2 sm:p-10 mt-3">
-          <div>
-            <h1 className="flex items-center gap-2 font-bold pl-4">
-              {" "}
-              What we offer
-            </h1>
-          </div>
-
-          <div className="mt-3 ml-2">
-            <p className="flex gap-2 items-center">
-              <IoIosArrowRoundForward size={20} className="w-6" /> We provide
-              best photographer in your town{" "}
-            </p>
-            <p className="flex gap-2 items-center">
-              <IoIosArrowRoundForward size={20} className="w-6" />
-              We provide pre weeding and wedding photography{" "}
-            </p>
-
-            <p className="flex gap-2 items-center">
-              <IoIosArrowRoundForward size={20} className="w-6" /> Capture your
-              special moments with our skilled photographers
-            </p>
-            <p className="flex gap-2 items-center">
-              <IoIosArrowRoundForward size={20} className="w-6" />
-              Let us immortalize your love story through stunning pre-wedding
-              and wedding photography
-            </p>
-            <p className="flex gap-2 items-center">
-              <IoIosArrowRoundForward size={20} className="w-6" /> Transform
-              your memories into timeless photographs with our professional
-              services
-            </p>
-          </div>
-        </section>
 
         <section className="bg-gray-100  py-5 flex items-center justify-around px-5 shadow-md rounded-md ">
           <div className=" m-auto md:ml-32">
