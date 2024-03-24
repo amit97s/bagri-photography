@@ -132,11 +132,12 @@
 }
 .quote h2 {
   margin-top: 13px;
-  font-family: Whisper;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px ;
   letter-spacing: 2px;
 }
 .quote p {
-  font-family: cursive;
+  /* font-family: cursive; */
   margin-top: -2px;
   color: rgb(239, 15, 15);
   font-weight: 600;
