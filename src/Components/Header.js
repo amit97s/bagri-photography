@@ -14,7 +14,7 @@ const Header = () => {
   };
   return (
     <>
-      <div className="md:hidden flex items-center justify-between p-3">
+      <div className="md:hidden flex items-center justify-between p-3 z-10">
         <img src={signature} alt="logo" className="w-44 md:hidden" />
         <section
           className="md:hidden flex items-center text-lg cursor-pointer z-[1000]"
@@ -24,12 +24,12 @@ const Header = () => {
         </section>
       </div>
       <main
-        className={` absolute top-0 left-0 md:relative flex flex-col md:flex-row items-center justify-between py-2 px-10 bg-white w-full  shadow-lg rounded-b-lg md:top-0  md:bg-white md:shadow-none md:rounded-b-none ${
+        className={`z-10 absolute top-0 left-0 md:relative flex flex-col md:flex-row items-center justify-between py-2 px-10 bg-white w-full  shadow-md rounded-b-lg md:top-0  md:bg-white md:shadow-none md:rounded-b-none ${
           toggle ? "hidden" : ""
         } `}
       >
         <section
-          className={`flex flex-col md:flex-row items-center gap-3 md:gap-10 `}
+          className={`flex flex-col md:flex-row items-center  md:gap-10 `}
         >
           <NavLink to="/" className="no-underline text-black">
             Home
@@ -41,7 +41,7 @@ const Header = () => {
         <section className="hidden md:flex">
           <img src={signature} alt="logo" className="w-44 " />
         </section>
-        <section className="flex flex-col md:flex-row items-center gap-3 md:gap-10">
+        <section className="flex flex-col md:flex-row items-center  md:gap-10">
           <NavLink
             to="/portfolio"
             className="relative group no-underline text-black"

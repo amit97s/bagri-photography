@@ -1,11 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import img from "../subassets/bagris images/_AJU1479.jpg";
-
-// import { IoIosArrowRoundForward } from "react-icons/io";
-// import { IoIosInformationCircle } from "react-icons/io";
 import { MdLocalPhone } from "react-icons/md";
-
 import callUs from "../assets/callus.png";
+import emailjs from "@emailjs/browser";
 
 const Finalcontact = () => {
   const [name, setName] = useState("");
@@ -17,14 +14,14 @@ const Finalcontact = () => {
   const [postWedding, setPostWedding] = useState(false);
   const [wedding, setWedding] = useState(false);
   const [preWedding, setPreWedding] = useState(false);
-
   const [error, setError] = useState({});
+  const form = useRef();
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const phoneRegex = /^\d{10}$/;
+  const phoneRegex = /^(\+?\d{2})?\d{10}$/;
   const budgetRegex = /^\d+$/;
 
-  const handleSubmit = (event) => {
+  const sendEmail = (event) => {
     event.preventDefault();
 
     const errors = {};
@@ -53,6 +50,18 @@ const Finalcontact = () => {
     setError(errors);
 
     if (Object.keys(errors).length === 0) {
+      emailjs
+        .sendForm("service_p83jofu", "template_9itjkxc", form.current, {
+          publicKey: "Pk40EDkn6mr59FYbS",
+        })
+        .then(
+          (result) => {
+            console.log("SUCCESS!", result);
+          },
+          (error) => {
+            console.log("FAILED...", error);
+          }
+        );
     }
   };
 
@@ -67,7 +76,11 @@ const Finalcontact = () => {
             className="w-screen h-[25rem] lg:h-[46rem] object-cover   "
           />
           <div className=" relative w-full top-[2px] right-0 bg-white lg:shadow-lg rounded-md lg:w-[28rem] p-4 lg:absolute lg:right-10 lg:top-7  ">
-            <form className="flex flex-col gap-1.5" onSubmit={handleSubmit}>
+            <form
+              className="flex flex-col gap-1.5"
+              onSubmit={sendEmail}
+              ref={form}
+            >
               <h1 className="text-lg font-bold">
                 Get in Touch with bagri photography
               </h1>
@@ -87,6 +100,7 @@ const Finalcontact = () => {
                     type="text"
                     id="UserName"
                     placeholder={"John Doe"}
+                    name="user_name"
                     value={name}
                     onChange={(event) => setName(event.target.value)}
                     className={`mt-1 w-full rounded-md sm:text-sm outline-none border py-2.5 px-2 `}
@@ -105,12 +119,13 @@ const Finalcontact = () => {
                   <input
                     type="email"
                     id="UserEmail"
+                    name="user_email"
                     placeholder={"johndoe@gmail.com"}
                     value={email}
                     onChange={(event) => setEmail(event.target.value)}
                     className={`mt-1 w-full rounded-md sm:text-sm outline-none border py-2.5 px-2 
-                   
-                    }`}
+               
+                }`}
                   />
                   {error.email && (
                     <p className="text-red-500 text-xs">{error.email}</p>
@@ -130,6 +145,7 @@ const Finalcontact = () => {
                     id="UserPhone"
                     placeholder={"+91 1234567890"}
                     value={phone}
+                    name="user_phone"
                     onChange={(event) => setPhone(event.target.value)}
                     className={`mt-1 w-full rounded-md sm:text-sm outline-none border py-2.5 px-2 `}
                   />
@@ -148,7 +164,8 @@ const Finalcontact = () => {
                   <input
                     type="text"
                     id="budget"
-                    placeholder={"please select your budget"}
+                    placeholder={"₹ please select your budget"}
+                    name="user_budget"
                     value={budget}
                     onChange={(event) => setBudget(event.target.value)}
                     className={`mt-1 w-full rounded-md sm:text-sm outline-none border py-2.5 px-2 `}
@@ -170,18 +187,18 @@ const Finalcontact = () => {
                   <select
                     id="City"
                     value={city}
+                    name="user_city"
                     onChange={(event) => setCity(event.target.value)}
                     className={`mt-1 w-full rounded-md sm:text-sm outline-none border py-2.5 px-2 ${
                       error.city ? "border-red-600" : ""
                     }`}
                   >
                     <option value="">Select city</option>
-                    <option value="Noida">Noida</option>
-                    <option value="Faridabad">Faridabad</option>
-                    <option value="New Delhi">New Delhi</option>
-                    <option value="Ghaziabad">Ghaziabad</option>
-                    <option value="Meerut">Meerut</option>
-                    <option value="Old Delhi">Old Delhi</option>
+                    <option value="Noida">Delhi</option>
+                    <option value="Faridabad">Gurgaon</option>
+                    <option value="New Delhi">Chandigarh</option>
+                    <option value="Ghaziabad">Panchkula</option>
+                    <option value="Meerut">Jaipur</option>
                     <option value="Other">Other</option>
                   </select>
                   {error.city && (
@@ -191,7 +208,7 @@ const Finalcontact = () => {
               </div>
 
               <label
-                htmlFor="Budget"
+                htmlFor="Services"
                 className="block text-sm font-medium text-gray-900"
               >
                 Services*
@@ -201,6 +218,7 @@ const Finalcontact = () => {
                   <input
                     type="checkbox"
                     id="preWedding"
+                    name="preWedding"
                     checked={preWedding}
                     onChange={(event) => setPreWedding(event.target.checked)}
                   />
@@ -211,6 +229,7 @@ const Finalcontact = () => {
                   <input
                     type="checkbox"
                     id="postWedding"
+                    name="postWedding"
                     checked={postWedding}
                     onChange={(event) => setPostWedding(event.target.checked)}
                   />
@@ -221,6 +240,7 @@ const Finalcontact = () => {
                   <input
                     type="checkbox"
                     id="wedding"
+                    name="wedding"
                     checked={wedding}
                     onChange={(event) => setWedding(event.target.checked)}
                   />
@@ -242,6 +262,7 @@ const Finalcontact = () => {
                   id="Message"
                   className="mt-1 w-full rounded-md sm:text-sm outline-none border py-2.5 px-2"
                   rows="4"
+                  name="message"
                   placeholder="Enter your message......."
                   value={message}
                   onChange={(event) => setMessage(event.target.value)}
@@ -279,9 +300,12 @@ const Finalcontact = () => {
               You can directly call us!
             </h1>
             <p> Give us a call and discuss your requirements.</p>
-            <button className="mt-5 flex items-center justify-center gap-4 bg-green-500 rounded-md hover:bg-green-600 duration-150 text-white py-2.5 px-1 sm:px-5 outline-none border-none font-medium text-base w-full ">
-              <MdLocalPhone size={20} /> Call us +91 0987654321
-            </button>
+            <a
+              href="tel:+919729468026"
+              className="mt-5 flex no-underline items-center justify-center gap-4 bg-green-500 rounded-md hover:bg-green-600 duration-150 text-white py-2.5 px-1 sm:px-5 outline-none border-none font-medium text-base w-full "
+            >
+              <MdLocalPhone size={20} /> Call us +91 9729468026
+            </a>
           </div>
 
           <div className="mr-32 hidden md:block">
