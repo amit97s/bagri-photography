@@ -54,12 +54,15 @@ import bimg23 from "../subassets/bagris images/_AJU0468.jpg";
 
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import Activities from "./Activities";
+import { useNavigate } from "react-router-dom";
 const Home = () => {
+  const navigate = useNavigate();
+
   const images = [
-    { name: "pic-1", src: bimg11 },
+    { name: "pic-1", src: bimg23 },
     { name: "pic-2", src: bimg12 },
     { name: "pic-3", src: bimg14 },
-    { name: "pic-4", src: bimg23 },
+    { name: "pic-4", src: bimg11 },
   ];
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -76,7 +79,7 @@ const Home = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       handleNext();
-    }, 3000);
+    }, 4000);
 
     return () => clearInterval(intervalId);
   }, [currentSlide, handleNext, handlePrev]);
@@ -151,7 +154,10 @@ const Home = () => {
                 className="w-full sm:w-60 md:w-80 lg:w-[30rem]"
                 style={{ filter: "brightness(40%)" }}
               />
-              <button className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  outline-none border border-white px-2 py-1.5 bg-transparent text-white rounded-md hover:bg-white hover:text-black">
+              <button
+                onClick={() => navigate("/pre-wedding")}
+                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  outline-none border border-white px-2 py-1.5 bg-transparent text-white rounded-md hover:bg-white hover:text-black"
+              >
                 view more
               </button>
             </div>
@@ -163,7 +169,10 @@ const Home = () => {
                 className="w-full sm:w-60 md:w-80 lg:w-[30rem]"
                 style={{ filter: "brightness(40%)" }}
               />
-              <button className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  outline-none border border-white px-2 py-1.5 bg-transparent text-white rounded-md hover:bg-white hover:text-black">
+              <button
+                onClick={() => navigate("/post-wedding")}
+                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  outline-none border border-white px-2 py-1.5 bg-transparent text-white rounded-md hover:bg-white hover:text-black"
+              >
                 view more
               </button>
             </div>
@@ -176,7 +185,10 @@ const Home = () => {
                 className="w-full sm:w-60 md:w-80 lg:w-[30rem]"
                 style={{ filter: "brightness(40%)" }}
               />
-              <button className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 outline-none border border-white px-2 py-1.5 bg-transparent text-white rounded-md hover:bg-white hover:text-black">
+              <button
+                onClick={() => navigate("/wedding")}
+                className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 outline-none border border-white px-2 py-1.5 bg-transparent text-white rounded-md hover:bg-white hover:text-black"
+              >
                 view more
               </button>
             </div>
@@ -187,7 +199,10 @@ const Home = () => {
                 className="w-full sm:w-60 md:w-80 lg:w-[30rem]"
                 style={{ filter: "brightness(40%)" }}
               />
-              <button className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  outline-none border border-white px-2 py-1.5 bg-transparent text-white rounded-md hover:bg-white hover:text-black">
+              <button
+                onClick={() => navigate("/photography")}
+                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  outline-none border border-white px-2 py-1.5 bg-transparent text-white rounded-md hover:bg-white hover:text-black"
+              >
                 view more
               </button>
             </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import Bacakgr from "../subassets/bagris images/_AJU0038.jpg";
 import assetimg from "../subassets/bagris images/_AJU0038.jpg";
-import assetimg1 from "../subassets/bagris images/_AJU0056-2.jpg";
+// import assetimg1 from "../subassets/bagris images/_AJU0056-2.jpg";
 import assetimg2 from "../subassets/bagris images/_AJU0059.jpg";
 import assetimg3 from "../subassets/bagris images/_AJU0071-2.jpg";
 import assetimg4 from "../subassets/bagris images/_AJU0079.jpg";
@@ -41,13 +41,19 @@ function Collage3() {
       <div className="w-[1200px] h-[600px] border border-red-800 m-auto mt-4">
         <img src={Bacakgr} alt="" className="w-[100%] h-[100%] object-cover" />
       </div>
-      <div className="w-full h-10 text-blue-500 text-center mt-10"> my stories</div>
+      <div className="w-full h-10 text-blue-500 text-center mt-10">
+        {" "}
+        my stories
+      </div>
       <div className="text-center m-10">amit & aakansha</div>
 
       <div className="m-auto flex flex-wrap w-[800px] gap-3  border border-red-950">
         {imagesmapp.map((colimg, index) => {
           return (
-            <div className="w-[47%] h-[300px] ml-3 border border-red-950 hover:opacity-85" key={index}>
+            <div
+              className="w-[47%] h-[300px] ml-3 border border-red-950 hover:opacity-85"
+              key={index}
+            >
               <img
                 src={colimg.colImages}
                 alt={"img"}
