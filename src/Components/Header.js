@@ -50,8 +50,8 @@ const Header = () => {
           >
             Portfolio
             {isMenuOpen && (
-              <div className="absolute top-full -left-10  bg-white border border-gray-200 rounded-md px-4 py-2 shadow-md z-[999]">
-                <ul className="list-none no-underline flex flex-col items-center justify-center">
+              <div className="absolute top-6 -left-10  bg-white border border-gray-200 rounded-md  shadow-md z-[999] h-32">
+                <ul className="list-none no-underline flex flex-col gap-2  items-center justify-center p-4 h-fit w-fit">
                   <li>
                     <NavLink to="/wedding" className="no-underline text-black ">
                       Weddings
