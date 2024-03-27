@@ -34,6 +34,23 @@ function Collage1() {
     },
     {
       colImages: assetimg8,
+    },{
+      colImages: assetimg3,
+    },
+    {
+      colImages: assetimg4,
+    },
+    {
+      colImages: assetimg5,
+    },
+    {
+      colImages: assetimg6,
+    },
+    {
+      colImages: assetimg7,
+    },
+    {
+      colImages: assetimg8,
     },
   ];
   return (
@@ -46,11 +63,11 @@ function Collage1() {
         my stories
       </div>
       <div className="text-center m-10">amit & aakansha</div>
-      <div className="m-auto flex flex-wrap w-[800px] gap-3  border border-red-950">
+      <div className="m-auto flex flex-wrap w-[800px] gap-3 ">
         {imagesmapp.map((colimg, index) => {
           return (
             <div
-              className="w-[47%] h-[300px] ml-3 border border-red-950 hover:opacity-85"
+              className="w-[47%] h-[300px] ml-3 hover:opacity-85"
               key={index}
             >
               <img

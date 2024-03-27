@@ -203,7 +203,7 @@ const Home = () => {
                 onClick={() => navigate("/photography")}
                 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  outline-none border border-white px-2 py-1.5 bg-transparent text-white rounded-md hover:bg-white hover:text-black"
               >
-                view more
+                n view more
               </button>
             </div>
           </div>
